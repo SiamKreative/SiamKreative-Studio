@@ -151,21 +151,28 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 }
 .peppermint-nav {
 	display: block;
-	width: 80px;
+	width: 60px;
 	height: 80px;
-	border-radius: 80px;
-	border: 3px solid #73D0F4;
 	position: absolute;
 	top: 50%;
 	margin-top: -40px;
-	text-indent: -9999em;
 	cursor: pointer;
+	transition: all 100ms ease-in-out;
 }
 .peppermint-prev {
 	left: 50px;
 }
 .peppermint-next {
 	right: 50px;
+}
+.peppermint-nav polyline {
+	transition: all 100ms ease-in-out;
+}
+.peppermint-nav:active polyline {
+	stroke-width: 6;
+}
+.peppermint-nav:hover polyline, .peppermint-nav:focus polyline {
+	stroke-width: 3;
 }
 
 /**
