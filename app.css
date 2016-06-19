@@ -56,6 +56,9 @@ section:nth-child(odd) {
 .intro .logo {
 	margin-bottom: 1em;
 }
+.intro p::selection {
+	background-color: #424242;
+}
 .covervid-wrapper {
 	position: absolute;
 	top: 0;
