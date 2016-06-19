@@ -70,8 +70,14 @@ section:nth-child(odd) {
 /**
  * About Us
  */
-#about p {
-	padding-bottom: 0;
+#about .grid {
+	margin-top: 2em;
+}
+#about .grid > div:hover h4 {
+	color: #73D0F4;
+}
+#about .grid > div:hover p {
+	color: #3D6889;
 }
 
 /**
