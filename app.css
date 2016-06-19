@@ -82,11 +82,8 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 #about .grid {
 	margin-top: 2em;
 }
-#about .grid > div:hover h4 {
+#about .grid h4 {
 	color: #73D0F4;
-}
-#about .grid > div:hover p {
-	color: #3D6889;
 }
 
 /**
