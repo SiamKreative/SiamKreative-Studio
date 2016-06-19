@@ -51,11 +51,10 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 	color: white;
 	background-size: cover;
 	position: relative;
+	display: flex;
+	align-items: center;
 }
 .intro .wrapper-small {
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
 	z-index: 10;
 }
 .intro p {
@@ -65,6 +64,7 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 .intro .text {
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
+	text-shadow: 0 0 10px black;
 }
 .intro p::selection {
 	background-color: #424242;
