@@ -6,31 +6,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	 * Instafeed.js
 	 * http://instafeedjs.com/
 	 */
-	var count;
-	var item;
-	var itemFirst;
-	var itemLast;
-	var target = document.getElementById("instagram_gallery");
 	var userFeed = new Instafeed({
 		target: 'instagram_gallery',
 		get: 'user',
 		userId: '514502257',
 		accessToken: '514502257.6fda5f5.37de1b87951a4ad08979990302aedb04',
-		limit: 21,
-		after: function () {
-			item = target.childNodes;
-			itemFirst = target.firstElementChild;
-			itemLast = item[item.length - 1];
-			count = item.length;
-
-			// Check if enough photos on instagram. Minimum should be 21 (3x7)
-			if (count >= 21) {
-				return;
-			} else {
-				// Clone the first item at the end of the gallery
-				target.innerHTML += itemFirst.outerHTML;
-			}
-		}
+		limit: 16
 	});
 
 	// Run Instafeed

@@ -1,5 +1,6 @@
 @import 'bower_components/cutestrap/dist/css/cutestrap.min.css';
 @import 'bower_components/Peppermint/dist/peppermint.required.css';
+@import 'css/sk_icons.css';
 
 /**
  * Overrides
@@ -201,35 +202,84 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
  */
 #instagram_gallery {
 	position: absolute;
-	top: 0;
-	right: 0;
-	width: 480px;
-	width: calc(160px*3);
-	height: 100%;
+	width: 640px;
+	width: calc(160px*4);
+	height: 640px;
+	height: calc(160px*4);
+}
+#instagram_gallery {
+	bottom: 0;
+	right: 0;	
 }
 #instagram_gallery:after {
 	content: "";
 	display: table;
 	clear: both;
 }
+#social_networks a,
 #instagram_gallery a {
 	display: block;
 	width: 160px;
 	height: 160px;
-	float: right;
+	float: left;
 	transition: opacity 0.3s ease-out;
 }
-#instagram_gallery a:nth-child(3n) {
-	opacity: 0.1;
+#instagram_gallery img {
+	width: 100%;
 }
-#instagram_gallery a:nth-child(3n-1) {
+#instagram_gallery a:nth-child(1),
+#instagram_gallery a:nth-child(2),
+#instagram_gallery a:nth-child(3),
+#instagram_gallery a:nth-child(5),
+#instagram_gallery a:nth-child(6),
+#instagram_gallery a:nth-child(9) {
+	visibility: hidden;
+}
+#instagram_gallery a:nth-child(4),
+#instagram_gallery a:nth-child(7),
+#instagram_gallery a:nth-child(10),
+#instagram_gallery a:nth-child(13) {
 	opacity: 0.25;
+}
+#instagram_gallery a:nth-child(4),
+#instagram_gallery a:nth-child(8),
+#instagram_gallery a:nth-child(11),
+#instagram_gallery a:nth-child(14) {
+	opacity: 0.5;
 }
 #instagram_gallery a:hover {
 	opacity: 1;
 }
-#instagram_gallery img {
-	width: 100%;
+
+#social_networks {
+	position: absolute;
+	width: 320px;
+	width: calc(160px*2);
+	height: 320px;
+	height: calc(160px*2);
+	bottom: 0;
+	left: 0;
+}
+#social_networks a:first-child {
+	float: none;
+}
+#social_networks a {
+	color: white;
+	background-color: #f1f1f1;
+	position: relative;
+}
+#social_networks a:hover {
+	opacity: 0.5;
+}
+#social_networks i:before {
+	font-size: 80px;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	margin: -40px -40px 0 0;
+}
+#social_networks span {
+	display: none;
 }
 
 /**
