@@ -54,7 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		speed: 500,
 		slideshowInterval: 5000,
 		// this is not working with the custom controls
-		stopSlideshowAfterInteraction: true
+		stopSlideshowAfterInteraction: true,
+		// this does not seem to work either. http://instafeedjs.com/#templating
+		template: '<a href="{{link}}" target="_blank"><img width="150" height="150" src="{{image}}" /></a>'
 	});
 
 	// Add prev/next controls
