@@ -62,11 +62,57 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 	font-size: 120%;
 	line-height: 1.6em;
 }
-.intro .logo {
-	margin-bottom: 1em;
+.intro .text {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 }
 .intro p::selection {
 	background-color: #424242;
+}
+.intro .btn {
+	height: auto;
+	background: none;
+	color: #73D0F4;
+	border: 3px solid #73D0F4;
+	text-transform: uppercase;
+	font-size: 80%;
+	transition: all 0.3s ease-out;
+	position: relative;
+}
+.intro .btn:first-child:after, .intro .btn:last-child:after {
+	content: '';
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	transition: all 0.1s ease-out;
+}
+.intro .btn:first-child:after {
+	left: -3px;
+	top: -3px;
+	border-left: 3px solid #73D0F4;
+	border-top: 3px solid #73D0F4;
+}
+.intro .btn:last-child:after {
+	right: -3px;
+	bottom: -3px;
+	border-right: 3px solid #73D0F4;
+	border-bottom: 3px solid #73D0F4;
+}
+.intro .btn:hover:first-child:after {
+	border-color: white;
+	left: -15px;
+	top: -15px;
+}
+.intro .btn:hover:last-child:after {
+	border-color: white;
+	right: -15px;
+	bottom: -15px;
+}
+.intro .btn:hover {
+	background: #424242;
+	color: white;
+	border: 3px solid white;
 }
 .covervid-wrapper {
 	position: absolute;
