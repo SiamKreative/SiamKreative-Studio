@@ -1,0 +1,235 @@
+@import 'node_modules/cutestrap/dist/css/cutestrap.min.css';
+@import 'bower_components/Peppermint/dist/peppermint.required.css';
+
+/**
+ * Overrides
+ */
+.btn, [type=button], [type=submit], button {
+	background-color: #73D0F4;
+}
+.btn:focus, .btn:hover, [type=button]:focus, [type=button]:hover, [type=submit]:focus, [type=submit]:hover, button:focus, button:hover {
+	background-color: #3D6889;
+}
+.select select:focus, .textfield :focus {
+	border-color: #73D0F4;
+	box-shadow: none;
+}
+.ta-center img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/**
+ * Section
+ */
+section {
+	position: relative;
+	overflow: hidden;
+}
+section:nth-child(odd) {
+	color: white;
+	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
+	background-color: #3D6889;
+	background-image: url(images/patterns/binding-dark.png);
+}
+
+/**
+ * Superheader
+ */
+.intro {
+	height: 100vh;
+	color: white;
+	background-size: cover;
+	position: relative;
+}
+.intro .wrapper-small {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
+}
+.intro p {
+	font-size: 120%;
+	line-height: 1.6em;
+}
+.intro .logo {
+	margin-bottom: 1em;
+}
+.covervid-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/**
+ * About Us
+ */
+#about p {
+	padding-bottom: 0;
+}
+
+/**
+ * Why Us
+ */
+#why-us:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0.2;
+	background-image: url('svg/background_2.svg');
+	background-repeat: no-repeat;
+	background-position: -50% 100%;
+	background-size: 60%;
+	pointer-events: none;
+}
+#why-us .grid h5 {
+	text-transform: capitalize;
+}
+#why-us .grid {
+	counter-reset: li;
+}
+#why-us .grid h5:before {
+	content: counter(li);
+	counter-increment: li;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	color: #73D0F4;
+	margin: 30px auto;
+	font-size: 80px;
+	height: 90px;
+	line-height: 1;
+	width: 80px;
+	border-bottom: 3px solid #73D0F4;
+	text-shadow: 0 0 30px rgba(115, 208, 244, 0.75);
+}
+
+/**
+ * Testimonials
+ */
+.peppermint-dots {
+	margin: 0;
+	padding: 0;
+}
+.peppermint-dots li {
+	display: inline-block;
+}
+.peppermint-dots li.peppermint-active-dot span {
+	background-color: #73D0F4;
+}
+.peppermint-dots span {
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: #3D6889;
+	margin: 0 1em;
+	transition: background-color 0.3s ease-out;
+}
+.peppermint-nav {
+	display: block;
+	width: 80px;
+	height: 80px;
+	border-radius: 80px;
+	border: 3px solid #73D0F4;
+	position: absolute;
+	top: 50%;
+	margin-top: -40px;
+	text-indent: -9999em;
+	cursor: pointer;
+}
+.peppermint-prev {
+	left: 50px;
+}
+.peppermint-next {
+	right: 50px;
+}
+
+/**
+ * Portfolio
+ */
+#portfolio:before, #portfolio:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0.2;
+	background-repeat: no-repeat;
+	pointer-events: none;
+}
+#portfolio:before {
+	background-image: url('svg/background_2.svg');
+	background-position: 0 100%;
+	background-size: 50%;
+	transform: rotate(180deg);
+}
+#portfolio:after {
+	background-image: url('svg/background_2.svg');
+	background-position: 10% 100%;
+	background-size: 40%;
+}
+
+/**
+ * Instagram
+ */
+#instagram_gallery {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 480px;
+	width: calc(160px*3);
+	height: 100%;
+}
+#instagram_gallery:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+#instagram_gallery a {
+	display: block;
+	width: 160px;
+	height: 160px;
+	float: right;
+	transition: opacity 0.3s ease-out;
+}
+#instagram_gallery a:nth-child(3n) {
+	opacity: 0.1;
+}
+#instagram_gallery a:nth-child(3n-1) {
+	opacity: 0.25;
+}
+#instagram_gallery a:hover {
+	opacity: 1;
+}
+#instagram_gallery img {
+	width: 100%;
+}
+
+/**
+ * Contact
+ */
+#contact {
+	height: 100vh;
+}
+#contact form {
+	max-width: 640px;
+	margin: 0 auto;
+}
+#contact form [type=submit] {
+	display: block;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}

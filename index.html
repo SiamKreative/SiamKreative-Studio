@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>SiamKreative Studio - We’re a creative team that build strong brands & relationships.</title>
+		<meta name="description" content="We’re a creative team that build strong brands & relationships.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="app.css">
+	</head>
+	<body>
+		<section class="intro">
+			<div class="covervid-wrapper">
+				<video class="covervid-video" autoplay loop poster="media/Hello-World.jpg">
+					<source src="media/Hello-World.webm" type="video/webm"/>
+					<source src="media/Hello-World.mp4" type="video/mp4"/>
+				</video>
+			</div>
+			<div class="wrapper-small ta-center">
+				<h1 class="logo"><img src="images/logo.png" alt="SiamKreative Studio"></h1>
+				<p>We help forward-thinking clients succeed online by crafting georgous websites that make people want to know you.</p>
+				<p>Focus on your business and we’ll do the rest.</p>
+				<p><a class="btn" href="#portfolio">See portfolio</a></p>
+			</div>
+		</section>
+		<section id="about">
+			<div class="wrapper-large ta-center">
+				<article class="grid grid--medium">
+					<div>
+						<img src="svg/layers.svg" alt="" width="96">
+						<h4>UX/UI Expertise</h4>
+						<p>We’ll make sure that it's love at first sight when your customers visit your website. Design will not only look attractive, but also convey your marketing message.</p>
+					</div>
+					<div>
+						<img src="svg/settings-1.svg" alt="" width="96">
+						<h4>State-of-the-art Code.</h4>
+						<p>Staying up-to-date with the latest technologies and frameworks is part of our daily routine. Therefore, we are able to pick the most suitable technical platform for your business.</p>
+					</div>
+					<div>
+						<img src="svg/insight.svg" alt="" width="96">
+						<h4>Real World Results</h4>
+						<p>We’ve helped companies across the world grow revenue and we can help you do the same. How we launch, monitor and improve is key to your success.</p>
+					</div>
+				</article>
+			</div>
+		</section>
+		<section id="why-us">
+			<div class="wrapper ta-center">
+				<h3>Why Us?</h3>
+				<p>There are plenty of amazing web agency, so why us?<br> If you wonder, here are few reasons why our customers like to work with us:</p>
+				<article class="grid grid--medium">
+					<div>
+						<h5>We’re passionate.</h5>
+						<p>Because we love what we do, we’re always ready for the next technology shifts in the web industry.</p>
+					</div>
+					<div>
+						<h5>We’re a small business.</h5>
+						<p>Everything's hand-made and you're talking to the people who do the work.</p>
+					</div>
+					<div>
+						<h5>We deliver on time.</h5>
+						<p>By splitting your project in features/milestones, we garantee that you'll get your website in weeks, not months.</p>
+					</div>
+				</article>
+			</div>
+		</section>
+		<section id="testimonials">
+			<div class="wrapper ta-center">
+				<h3>Testimonials</h3>
+				<p>Check out our latest and greatest work below, or use the filters to dig deeper.</p>
+				<div class="peppermint peppermint-inactive" id="testimonials-slider">
+					<figure>
+						<img src="images/testimonial.png" alt="">
+					</figure>
+					<figure>
+						<img src="images/testimonial.png" alt="">
+					</figure>
+					<figure>
+						<img src="images/testimonial.png" alt="">
+					</figure>
+				</div>
+				<div class="peppermint-nav peppermint-prev" id="testimonials-arr-prev">Arrow Right</div>
+				<div class="peppermint-nav peppermint-next" id="testimonials-arr-next">Arrow Left</div>
+			</div>
+		</section>
+		<section id="portfolio">
+			<div class="wrapper ta-center">
+				<h3>Portfolio</h3>
+				<p>Check out our latest and greatest work below,<br> or use the filters to dig deeper.</p>
+				<img src="images/portfolio.png" alt="">
+			</div>
+		</section>
+		<section id="contact">
+			<div class="wrapper">
+				<div class="ta-center">
+					<h3>Contact</h3>
+					<p>We would love to hear from you.</br> If you rather use phone, feel free to give us a call at 087-499-4525.</p>
+				</div>
+				<form>
+					<label class="textfield">
+						<input required name="name" type="text" />
+						<span class="textfield__label">Full Name or Company Name</span>
+					</label>
+					<label class="textfield">
+						<input required name="email" type="text" />
+						<span class="textfield__label">Email Address</span>
+					</label>
+					<div class="ta-center">
+						<label class="checkbox">
+							<input required type="checkbox" name="inquiry_type" />
+							<span class="checkbox__label">Website</span>
+						</label>
+						<label class="checkbox">
+							<input required type="checkbox" name="inquiry_type" />
+							<span class="checkbox__label">Graphic Design</span>
+						</label>
+						<label class="checkbox">
+							<input required type="checkbox" name="inquiry_type" />
+							<span class="checkbox__label">Mobile App</span>
+						</label>
+						<label class="checkbox">
+							<input required type="checkbox" name="inquiry_type" />
+							<span class="checkbox__label">Other</span>
+						</label>
+					</div>
+					<label class="textfield">
+						<textarea required rows="8"></textarea>
+						<span name="project_description" class="textfield__label">Describe your project the best you can.</span>
+					</label>
+					<br/>
+					<input type="submit" value="Send Inquiry" />
+				</form>
+			</div>
+			<div id="instagram_gallery"></div>
+		</section>
+	</body>
+	
+	<script type="text/javascript" src="bower_components/Peppermint/dist/peppermint.min.js"></script>
+	<script type="text/javascript" src="node_modules/instafeed.js/instafeed.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</html>
