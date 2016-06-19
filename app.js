@@ -3,6 +3,12 @@
 document.addEventListener('DOMContentLoaded', function () {
 
 	/**
+	 * Smooth Scroll
+	 * https://github.com/cferdinandi/smooth-scroll
+	 */
+	smoothScroll.init();
+
+	/**
 	 * Instafeed.js
 	 * http://instafeedjs.com/
 	 */
