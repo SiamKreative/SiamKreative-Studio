@@ -93,11 +93,11 @@ section:nth-child(odd) {
 	background-size: 60%;
 	pointer-events: none;
 }
-#why-us .grid h5 {
-	text-transform: capitalize;
-}
 #why-us .grid {
 	counter-reset: li;
+}
+#why-us .grid h5 {
+	text-transform: capitalize;
 }
 #why-us .grid h5:before {
 	content: counter(li);
