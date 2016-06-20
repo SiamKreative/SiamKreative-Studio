@@ -223,6 +223,58 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 .peppermint-nav:hover polyline, .peppermint-nav:focus polyline {
 	stroke-width: 3;
 }
+#testimonials-slider {
+	width: 630px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.testimonial {
+	display: block;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+.testimonial blockquote {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-family: "Times New Roman";
+    line-height: 1.6em;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    font-style: italic;
+	border: 1px solid #424242;
+	padding: 3em;
+}
+.testimonial footer {
+	margin-top: -40px;
+}
+.testimonial .author {
+	font-style: normal;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.testimonial .company {
+	font-style: normal;
+	display: block;
+	max-width: 50%;
+	margin: 0 auto;
+	font-size: 80%;
+	color: #666;
+}
+.testimonial-photo {
+	width: 200px;
+	margin: 0 auto;
+	background: white;
+	margin-bottom: 20px;
+}
+.testimonial-photo img {
+	width: 80px;
+	height: 80px;
+	border-radius: 80px;
+}
 
 /**
  * Portfolio
