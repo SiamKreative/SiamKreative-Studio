@@ -338,6 +338,7 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 }
 #instagram_gallery img {
 	width: 100%;
+	height: auto;
 }
 
 /**
