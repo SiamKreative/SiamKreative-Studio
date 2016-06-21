@@ -1,23 +1,25 @@
-@import 'bower_components/cutestrap/dist/css/cutestrap.min.css';
+// primary colors
+$primary:       #73D0F4;
+$primary-dark:  #3D6889;
+
+$link:          #4076D4;
+$link--visited: #9140D4;
+$link--hover:   darken($link, 5%);
+$link--active:  #D44076;
+
+@import "bower_components/cutestrap/dist/scss/cutestrap";
 @import 'bower_components/Peppermint/dist/peppermint.required.css';
 
 /**
  * Overrides
  */
 body {
-	color: #3D6889;
+	color: $primary-dark;
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #424242;
 }
-.btn, [type=button], [type=submit], button {
-	background-color: #73D0F4;
-}
-.btn:focus, .btn:hover, [type=button]:focus, [type=button]:hover, [type=submit]:focus, [type=submit]:hover, button:focus, button:hover {
-	background-color: #3D6889;
-}
-.select select:focus, .textfield:focus {
-	border-color: #73D0F4;
+.textfield *:focus, .select select:focus {
 	box-shadow: none;
 }
 .ta-center img {
@@ -36,7 +38,7 @@ section {
 section:nth-child(odd) {
 	color: white;
 	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
-	background-color: #3D6889;
+	background-color: $primary-dark;
 	background-image: url(images/patterns/binding-dark.png);
 }
 section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3, section:nth-child(odd) h4, section:nth-child(odd) h5, section:nth-child(odd) h6 {
@@ -75,8 +77,8 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 	margin: 0 0.5em;
 	height: auto;
 	background: none;
-	color: #73D0F4;
-	border: 3px solid #73D0F4;
+	color: $primary;
+	border: 3px solid $primary;
 	text-transform: uppercase;
 	font-size: 80%;
 	transition: all 0.3s ease-out;
@@ -93,14 +95,14 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 .intro .btn:first-child:after {
 	left: -3px;
 	top: -3px;
-	border-left: 3px solid #73D0F4;
-	border-top: 3px solid #73D0F4;
+	border-left: 3px solid $primary;
+	border-top: 3px solid $primary;
 }
 .intro .btn:last-child:after {
 	right: -3px;
 	bottom: -3px;
-	border-right: 3px solid #73D0F4;
-	border-bottom: 3px solid #73D0F4;
+	border-right: 3px solid $primary;
+	border-bottom: 3px solid $primary;
 }
 .intro .btn:hover:first-child:after {
 	border-color: white;
@@ -132,7 +134,7 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 	margin-top: 2em;
 }
 #about .grid h4 {
-	color: #73D0F4;
+	color: $primary;
 }
 
 /**
@@ -166,13 +168,13 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 	display: block;
 	overflow: hidden;
 	text-align: center;
-	color: #73D0F4;
+	color: $primary;
 	margin: 30px auto;
 	font-size: 80px;
 	height: 90px;
 	line-height: 1;
 	width: 80px;
-	border-bottom: 3px solid #73D0F4;
+	border-bottom: 3px solid $primary;
 	text-shadow: 0 0 30px rgba(115, 208, 244, 0.75);
 }
 
@@ -187,14 +189,14 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 	display: inline-block;
 }
 .peppermint-dots li.peppermint-active-dot span {
-	background-color: #73D0F4;
+	background-color: $primary;
 }
 .peppermint-dots span {
 	display: block;
 	width: 10px;
 	height: 10px;
 	border-radius: 10px;
-	background-color: #3D6889;
+	background-color: $primary-dark;
 	margin: 0 1em;
 	transition: background-color 0.3s ease-out;
 }
