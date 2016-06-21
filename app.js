@@ -18,7 +18,7 @@ function renderPortfolio(jsonp) {
 	var items = '';
 	jsonp.projects.forEach(function (item) {
 		items += '<figure class="portfolio_item">';
-		items += '<img src="' + item.covers[404] + '" alt="' + item.name + '">';
+		items += '<img src="https://res.cloudinary.com/siamkreative/image/fetch/' + item.covers[404] + '" alt="' + item.name + '">';
 		items += '<figcaption>';
 		items += '<div class="portfolio_desc">';
 		items += '<h4>' + item.name + '</h4>';
