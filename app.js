@@ -1,5 +1,18 @@
 'use strict';
 
+function showHideItem() {
+	var checkbox = document.getElementById('inquiry_type');
+	var target = document.getElementsByName('inquiry_type_other')[0];
+	var container = target.parentNode;
+	if (checkbox.checked) {
+		container.style.display = 'block';
+		target.setAttribute('required', 'required');
+	} else {
+		container.style.display = 'none';
+		target.removeAttribute('required');
+	}
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 
 	/**
@@ -61,5 +74,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Add prev/next controls
 	sliderPrev.addEventListener('click', slider.prev, false);
 	sliderNext.addEventListener('click', slider.next, false);
+
+	/**
+	 * Contact Form
+	 */
+	showHideItem();
 
 });

@@ -155,10 +155,14 @@
 							<span class="checkbox__label">Mobile App</span>
 						</label>
 						<label class="checkbox">
-							<input required type="checkbox" name="inquiry_type" value="Other" />
+							<input required type="checkbox" name="inquiry_type" id="inquiry_type" value="Other" onClick="showHideItem();" />
 							<span class="checkbox__label">Other</span>
 						</label>
 					</div>
+					<label class="textfield">
+						<input required name="inquiry_type_other" type="text" />
+						<span class="textfield__label">Please specify what type of work you're looking for.</span>
+					</label>
 					<label class="textfield">
 						<textarea required rows="8"></textarea>
 						<span name="project_description" class="textfield__label">Describe your project the best you can.</span>
