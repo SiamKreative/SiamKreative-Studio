@@ -48,6 +48,10 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 /**
  * Superheader
  */
+.logo img {
+	height: auto;
+	max-width: 100%;
+}
 .intro {
 	height: 100vh;
 	color: white;
@@ -226,7 +230,8 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 	stroke-width: 3;
 }
 #testimonials-slider {
-	width: 630px;
+	width: 100%;
+	max-width: 630px;
 	overflow: hidden;
 	margin: 0 auto;
 }
@@ -393,9 +398,6 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 /**
  * Contact
  */
-#contact {
-	height: 100vh;
-}
 #contact form {
 	max-width: 640px;
 	margin: 0 auto;
@@ -405,4 +407,49 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 	width: 200px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+/**
+ * Responsive Fixes
+ * @todo Prefer to use a Sass mixin so that the media queries can be used inside components @include breakpoint(medium) {}
+ * See http://foundation.zurb.com/sites/docs/media-queries.html#the-breakpoint-mixin
+ */
+@media (min-width:959px) {
+	#contact {
+		height: 100vh;
+	}
+}
+@media (max-width:959px) {
+	section.intro {
+		background: url('https://cdn.rawgit.com/SiamKreative/SiamKreative-Studio/master/media/Hello-World.jpg') no-repeat 50% 50%;
+		background-size: cover;
+	}
+	.logo img {
+		max-width: 70%;
+	}
+	.covervid-wrapper {
+		display: none;
+	}
+	.peppermint-nav {
+		position: relative;
+		margin-top: -50px;
+		left: inherit;
+		right: inherit;
+
+		svg {
+			width: 30px;
+		}
+	}
+	.peppermint-prev {
+		float: left;
+	}
+	.peppermint-next {
+		float: right;
+	}
+	#instagram_gallery {
+		display: none;
+	}
+	#contact form .ta-center {
+		text-align: left;
+	}
 }
