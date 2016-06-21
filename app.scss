@@ -459,19 +459,17 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 		text-align: left;
 	}
 	.mobile-cta {
-		display: block;
-		width: 100%;
-		max-width: 640px;
-		margin: 1em auto 0 auto;
-		padding: 1em 0;
-		background: #73D0F4 url('images/phone-call.svg') no-repeat 5% 50%;
-		background-size: auto 60%;
-		border: none;
-		border-radius: .2rem;
-		box-sizing: border-box;
-		color: #fff;
-
 		a {
+			display: block;
+			width: 100%;
+			max-width: 640px;
+			margin: 1em auto 0 auto;
+			padding: 1em 0;
+			background: #73D0F4 url('images/phone-call.svg') no-repeat 5% 50%;
+			background-size: auto 60%;
+			border: none;
+			border-radius: .2rem;
+			box-sizing: border-box;
 			color: #fff;
 		}
 	}
