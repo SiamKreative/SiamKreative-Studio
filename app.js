@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		userId: '514502257',
 		accessToken: '514502257.6fda5f5.37de1b87951a4ad08979990302aedb04',
 		limit: 21,
-		template: '<a href="{{link}}" target="_blank"><img width="150" height="150" src="{{image}}" /></a>',
+		template: '<a href="{{link}}" target="_blank" title="{{caption}}"><img width="150" height="150" src="{{image}}" alt="{{caption}}"/></a>',
 		after: function () {
 			item = target.childNodes;
 			itemFirst = target.firstElementChild;
