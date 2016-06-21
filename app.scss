@@ -305,6 +305,53 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 	background-position: 10% 100%;
 	background-size: 40%;
 }
+#portfolio {
+	.wrapper > p:last-child {
+		padding-bottom: 0;
+	}
+}
+#portfolio_grid {
+	max-width: calc(424px*3);
+	margin: 0 auto;
+	padding-bottom: 9.6rem;
+	text-align: center;
+
+	figure.portfolio_item {
+		display: inline-block;
+		margin: 10px 10px 3px 10px;
+		padding: 0;
+		position: relative;
+
+		&:hover {
+			figcaption {
+				opacity: 1;
+			}
+		}
+	}
+	figcaption {
+		opacity: 0;
+		background-color: transparentize($primary-dark, .2);
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		transition: opacity 0.3s ease-out;
+		display: flex;
+		align-items: center;
+
+		.portfolio_desc {
+			margin: 0 auto;
+
+			h4 {
+				padding: 0;
+			}
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
 
 /**
  * Instagram

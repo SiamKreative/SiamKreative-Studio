@@ -13,6 +13,34 @@ function showHideItem() {
 	}
 }
 
+function renderPortfolio(jsonp) {
+	var container = document.getElementById('portfolio_grid');
+	var items = '';
+	jsonp.projects.forEach(function (item) {
+		items += '<figure class="portfolio_item">';
+		items += '<img src="' + item.covers[404] + '" alt="' + item.name + '">';
+		items += '<figcaption>';
+		items += '<div class="portfolio_desc">';
+		items += '<h4>' + item.name + '</h4>';
+		items += '<p>' + item.fields.join(' + ') + '</p>';
+		items += '<a class="btn" href="' + item.url + '" target="_blank">Details</a>';
+		items += '</div>';
+		items += '</figcaption>';
+		items += '</figure>';
+	});
+
+	// Hide the grid while we wait until images are ready
+	container.style.display = 'none';
+
+	// Append all items only once
+	container.innerHTML = items;
+
+	// Once all images are loaded, show the grid
+	imagesLoaded(container, function () {
+		container.style.display = 'block';
+	});
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 
 	/**
