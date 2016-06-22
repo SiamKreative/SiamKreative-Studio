@@ -1,12 +1,10 @@
 // primary colors
-$primary:       #73D0F4;
-$primary-dark:  #3D6889;
-
-$link:          #4076D4;
+$primary: #73D0F4;
+$primary-dark: #3D6889;
+$link: #4076D4;
 $link--visited: #9140D4;
-$link--hover:   darken($link, 5%);
-$link--active:  #D44076;
-
+$link--hover: darken($link, 5%);
+$link--active: #D44076;
 @import "bower_components/cutestrap/dist/scss/cutestrap";
 @import 'bower_components/Peppermint/dist/peppermint.required.css';
 
@@ -246,12 +244,12 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 	padding: 0;
 	border: none;
 	font-family: "Times New Roman";
-    line-height: 1.6em;
-    font-weight: 400;
-    font-size: 1.2em;
-    color: #333;
-    text-align: center;
-    font-style: italic;
+	line-height: 1.6em;
+	font-weight: 400;
+	font-size: 1.2em;
+	color: #333;
+	text-align: center;
+	font-style: italic;
 	border: 1px solid #424242;
 	padding: 3em;
 }
