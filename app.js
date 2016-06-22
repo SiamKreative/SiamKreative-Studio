@@ -41,6 +41,17 @@ function renderPortfolio(jsonp) {
 	});
 }
 
+function checkForm(form) {
+	form.submit.disabled = true;
+	form.submit.value = "Please wait...";
+	return true;
+}
+
+function resetForm(form) {
+	form.submit.disabled = false;
+	form.submit.value = "Send Inquiry";
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 
 	/**
