@@ -396,6 +396,29 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 }
 
 /**
+ * Thanks Page
+ */
+#thanks_page {
+	background: #424242 url('images/startup-photos.jpg') no-repeat 50% 50%;
+	background-size: cover;
+
+	.text {
+		h3 {
+			color: $primary;
+			border-top: 1px solid $primary;
+			border-bottom: 1px solid $primary;
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+		}
+	}
+	.btn {
+		&::after {
+			display: none;
+		}
+	}
+}
+
+/**
  * Contact
  */
 #contact form {
