@@ -438,26 +438,9 @@ $cta_text_color_hover: $cta_bg_color;
 		display: table;
 		clear: both;
 	}
-	p, .btn {
-		float: left;
-	}
-	p {
-		width: 60%;
-		text-align: right;
-		margin: 0;
-		padding: 0;
-	}
 	.btn {
-		width: 25%;
-		height: $cta_height;
-		margin-top: -$cta_height/2;
-		line-height: $cta_height;
-		padding: 0;
 		color: $cta_text_color;
 		background-color: $cta_bg_color;
-		position: absolute;
-		top: 50%;
-		right: $cta_horizontal_padding;
 
 		&:focus, &:hover {
 			color: $cta_text_color_hover;
@@ -496,6 +479,28 @@ $cta_text_color_hover: $cta_bg_color;
 		a {
 			color: inherit;
 			text-decoration: none;
+		}
+	}
+	.cta-banner {
+		p, .btn {
+			float: left;
+		}
+		p {
+			width: 60%;
+			text-align: right;
+			margin: 0;
+			padding: 0;
+		}
+		.btn {
+			width: 25%;
+			margin-top: -$cta_height/2;
+			height: $cta_height;
+			line-height: $cta_height;
+			padding-top: 0;
+			padding-bottom: 0;
+			position: absolute;
+			top: 50%;
+			right: $cta_horizontal_padding;
 		}
 	}
 }
