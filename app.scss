@@ -419,6 +419,59 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 }
 
 /**
+ * CTA Banner (Paragraph + Button)
+ */
+$cta_height: 60px;
+$cta_horizontal_padding: 8%;
+$cta_bg_color: white;
+$cta_bg_color_hover: $primary;
+$cta_text_color: $primary-dark;
+$cta_text_color_hover: $cta_bg_color;
+
+.cta-banner {
+	position: relative;
+	border-top: 1px solid $cta_bg_color;
+	border-bottom: 1px solid $cta_bg_color;
+	margin: 3rem auto;
+	padding: 2.4rem $cta_horizontal_padding;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	p, .btn {
+		float: left;
+	}
+	p {
+		width: 60%;
+		text-align: right;
+		margin: 0;
+		padding: 0;
+	}
+	.btn {
+		width: 25%;
+		height: $cta_height;
+		margin-top: -$cta_height/2;
+		line-height: $cta_height;
+		padding: 0;
+		color: $cta_text_color;
+		background-color: $cta_bg_color;
+		position: absolute;
+		top: 50%;
+		right: $cta_horizontal_padding;
+
+		&:focus, &:hover {
+			color: $cta_text_color_hover;
+			background-color: $cta_bg_color_hover;
+		}
+		&:active {
+			background-color: $cta_bg_color_hover;
+		}
+	}
+}
+
+/**
  * Contact
  */
 #contact form {
