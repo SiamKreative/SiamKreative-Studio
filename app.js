@@ -44,6 +44,7 @@ function renderPortfolio(jsonp) {
 function checkForm(form) {
 	form.submit.disabled = true;
 	form.submit.value = "Please wait...";
+	document.getElementsByName('_subject')[0].value += document.getElementsByName('name')[0].value;
 	return true;
 }
 
