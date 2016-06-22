@@ -427,9 +427,9 @@ $cta_text_color: $primary-dark;
 $cta_text_color_hover: $cta_bg_color;
 
 .cta-banner {
+	background: rgba(0,0,0,0.25);
 	position: relative;
-	border-top: 1px solid $cta_bg_color;
-	border-bottom: 1px solid $cta_bg_color;
+	border: 1px solid rgba(0,0,0,0.25);
 	margin: 3rem auto;
 	padding: 2.4rem $cta_horizontal_padding;
 
@@ -482,6 +482,10 @@ $cta_text_color_hover: $cta_bg_color;
 		}
 	}
 	.cta-banner {
+		background: none;
+		border: 0;
+		border-top: 1px solid $cta_bg_color;
+		border-bottom: 1px solid $cta_bg_color;
 		p, .btn {
 			float: left;
 		}
