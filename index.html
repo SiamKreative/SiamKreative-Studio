@@ -136,7 +136,7 @@
 					<h3>Contact</h3>
 					<p>We would love to hear from you.</br> If you rather use phone, feel free to give us a <span class="mobile-cta">call at <a href="tel:+6674994525">087-499-4525</a></span>.</p>
 				</div>
-				<form action="https://formspree.io/studio@siamkreative.com" method="POST" onSubmit="return checkForm(this);">
+				<form id="contact_form" action="https://formspree.io/studio@siamkreative.com" method="POST" onSubmit="return checkForm(this);">
 					<label class="textfield">
 						<input required name="name" type="text" />
 						<span class="textfield__label">Full Name or Company Name</span>
@@ -204,4 +204,5 @@
 	<script type="text/javascript" src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="data/behanceAPIProjectsJSONP.js?callback=renderPortfolio"></script>
+	<script type="text/javascript" src="https://freegeoip.net/json/?callback=formGeolocation"></script>
 </html>

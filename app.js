@@ -53,6 +53,16 @@ function resetForm(form) {
 	form.submit.value = "Send Inquiry";
 }
 
+function formGeolocation(jsonp) {
+	var form = document.getElementById('contact_form');
+	var dynamicItems = '';
+	// Visit non-inherited enumerable keys
+	Object.keys(jsonp).forEach(function (key) {
+		dynamicItems += '<input type="hidden" name="geolocation[' + key + ']" value="' + jsonp[key] + '"/>'
+	});
+	form.innerHTML += dynamicItems;
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 
 	/**
