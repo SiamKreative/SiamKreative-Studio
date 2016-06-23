@@ -41,9 +41,11 @@ function showHideItem() {
 	if (checkbox.checked) {
 		container.style.display = 'block';
 		target.setAttribute('required', 'required');
+		target.disabled = false;
 	} else {
 		container.style.display = 'none';
 		target.removeAttribute('required');
+		target.disabled = true;
 	}
 }
 
