@@ -1,18 +1,5 @@
 'use strict';
 
-function showHideItem() {
-	var checkbox = document.getElementById('inquiry_type');
-	var target = document.getElementsByName('inquiry_type_other')[0];
-	var container = target.parentNode;
-	if (checkbox.checked) {
-		container.style.display = 'block';
-		target.setAttribute('required', 'required');
-	} else {
-		container.style.display = 'none';
-		target.removeAttribute('required');
-	}
-}
-
 function renderPortfolio(jsonp) {
 	var container = document.getElementById('portfolio_grid');
 	var items = '';
@@ -39,6 +26,25 @@ function renderPortfolio(jsonp) {
 	imagesLoaded(container, function () {
 		container.style.display = 'block';
 	});
+}
+
+/**
+ * Form Functions
+ * 1) Show field based on checkbox
+ * 2) Prevent multiple form submissions
+ * 3) Add geolocation data
+ */
+function showHideItem() {
+	var checkbox = document.getElementById('inquiry_type');
+	var target = document.getElementsByName('inquiry_type_other')[0];
+	var container = target.parentNode;
+	if (checkbox.checked) {
+		container.style.display = 'block';
+		target.setAttribute('required', 'required');
+	} else {
+		container.style.display = 'none';
+		target.removeAttribute('required');
+	}
 }
 
 function checkForm(form) {
