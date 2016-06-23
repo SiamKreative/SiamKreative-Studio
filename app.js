@@ -63,10 +63,10 @@ function resetForm(form) {
 
 function formGeolocation(jsonp) {
 	var form = document.getElementById('contact_form');
-	var dynamicItems = '';
+	var dynamicItems = '<input type="hidden" name="gps" value="https://maps.google.com?q=' + jsonp.latitude + ',' + jsonp.longitude + '"/>';
 	// Visit non-inherited enumerable keys
 	Object.keys(jsonp).forEach(function (key) {
-		dynamicItems += '<input type="hidden" name="geolocation[' + key + ']" value="' + jsonp[key] + '"/>'
+		dynamicItems += '<input type="hidden" name="geolocation[' + key + ']" value="' + jsonp[key] + '"/>';
 	});
 	form.innerHTML += dynamicItems;
 }
