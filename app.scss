@@ -161,6 +161,9 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 #why-us .grid {
 	counter-reset: li;
 }
+#why-us .grid:last-child {
+	counter-reset: li 3;
+}
 #why-us .grid h5 {
 	text-transform: capitalize;
 }
