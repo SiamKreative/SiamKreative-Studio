@@ -138,4 +138,22 @@ document.addEventListener('DOMContentLoaded', function () {
 	 */
 	showHideItem();
 
+
+	/**
+	 * Why Us: Show only 3 random reasons
+	 * http://stackoverflow.com/a/11972692/1414881
+	 */
+	var max = 3;
+	var parent = document.getElementById('reasons');
+	var children = document.getElementById('reasons').getElementsByTagName('div');
+
+	// Shuffle the HTML
+	for (var i = children.length; i >= 0; i--) {
+		parent.appendChild(children[Math.random() * i | 0]);
+	}
+	// Find 3 #reasons and hide them
+	for (var i = 0, max; i < max; i++) {
+		children[i].style.display = 'none';
+	}
+
 });
