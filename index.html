@@ -218,5 +218,6 @@
 	<script type="text/javascript" src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="data/behanceAPIProjectsJSONP.js?callback=renderPortfolio"></script>
-	<script type="text/javascript" src="https://freegeoip.net/json/?callback=formGeolocation"></script>
+	<!-- The below JSONP request is asynch because contact form is at the footer -->
+	<script type="text/javascript" src="https://freegeoip.net/json/?callback=formGeolocation" async></script>
 </html>
