@@ -74,10 +74,21 @@ function formGeolocation(jsonp) {
 document.addEventListener('DOMContentLoaded', function () {
 
 	/**
-	 * Smooth Scroll
-	 * https://github.com/cferdinandi/smooth-scroll
+	 * Full height section on large screens
+	 * https://github.com/alvarotrigo/fullPage.js/tree/master/pure%20javascript%20(Alpha)
 	 */
-	smoothScroll.init();
+	fullpage.initialize('#fullpage', {
+		anchors: [
+			'DigitalStudio',
+			'WhatWeDo',
+			'WhyUs',
+			'ClientStories',
+			'Clients',
+			'Inquiry'
+		],
+		menu: '#menu',
+		css3: true
+	});
 
 	/**
 	 * Instafeed.js
@@ -137,7 +148,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	 * Contact Form
 	 */
 	showHideItem();
-
 
 	/**
 	 * Why Us: Show only 3 random reasons
