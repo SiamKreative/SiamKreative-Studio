@@ -1,12 +1,14 @@
 // primary colors
 $primary: #73D0F4;
 $primary-dark: #3D6889;
+$primary-dark-rgba: rgba(61, 104, 137, 1);
 $link: #4076D4;
 $link--visited: #9140D4;
 $link--hover: darken($link, 5%);
 $link--active: #D44076;
-@import "bower_components/cutestrap/dist/scss/cutestrap";
+@import 'bower_components/cutestrap/dist/scss/cutestrap';
 @import 'bower_components/Peppermint/dist/peppermint.required.css';
+@import 'bower_components/fullpage.js/pure javascript (Alpha)/javascript.fullPage.css';
 
 /**
  * Overrides
@@ -41,6 +43,102 @@ section:nth-child(odd) {
 }
 section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3, section:nth-child(odd) h4, section:nth-child(odd) h5, section:nth-child(odd) h6 {
 	color: white;
+}
+
+/**
+ * Navigation bar fixed to top
+ */
+#menu {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 60px;
+	line-height: 60px;
+	background: rgba(0, 0, 0, 0.25);
+	z-index: 5;
+	text-align: center;
+	font-size: 80%;
+	font-weight: bold;
+	text-transform: uppercase;
+	opacity: 0;
+	transition: all 0.5s ease-out;
+
+	li {
+		margin: 0 2em;
+		padding: 0;
+		display: inline;
+		padding-bottom: 5px;
+
+		a {
+			color: white;
+			text-decoration: none;
+		}
+		&.totop {
+			a {
+				display: block;
+				background: $primary;
+				position: absolute;
+				font-size: 120%;
+				width: 60px;
+				height: 60px;
+				position: absolute;
+				text-indent: -9999em;
+				top: 0;
+				right: 30px;
+				background: url('images/arrow-up.svg') no-repeat 50% 50%;
+				background-size: 50% 50%;
+				opacity: 0.75;
+
+				&:hover {
+					background-color: $primary-dark;
+				}
+			}
+		}
+	}
+}
+.fp-viewing-WhatWeDo {
+	li.WhatWeDo {
+		border-bottom: 2px solid $primary;
+	}
+}
+.fp-viewing-WhyUs {
+	li.WhyUs {
+		border-bottom: 2px solid $primary;
+	}
+}
+.fp-viewing-ClientStories {
+	li.ClientStories {
+		border-bottom: 2px solid $primary;
+	}
+}
+.fp-viewing-Clients {
+	li.Clients {
+		border-bottom: 2px solid $primary;
+	}
+}
+.fp-viewing-Inquiry {
+	li.Inquiry {
+		border-bottom: 2px solid $primary;
+	}
+}
+.fp-viewing-DigitalStudio, .fp-viewing-Inquiry {
+	#menu {
+		pointer-events: none;
+		cursor: default;
+	}
+}
+.fp-viewing-WhatWeDo, .fp-viewing-WhyUs, .fp-viewing-ClientStories, .fp-viewing-Clients {
+	#menu {
+		opacity: 1;
+	}
+}
+.fp-viewing-WhatWeDo, .fp-viewing-ClientStories {
+	#menu {
+		background: rgba($primary-dark-rgba, 0.8);
+	}
 }
 
 /**
@@ -475,8 +573,23 @@ $cta_text_color_hover: $cta_bg_color;
  * See http://foundation.zurb.com/sites/docs/media-queries.html#the-breakpoint-mixin
  */
 @media (min-width:959px) {
-	#contact {
+	section {
+
+		/**
+		 * On large screens, every section is full size
+		 * https://github.com/alvarotrigo/fullPage.js/tree/master/pure%20javascript%20(Alpha)
+		 */
 		height: 100vh;
+		/**
+		 * Center every section vertically
+		 */
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.wrapper, .wrapper-large {
+			max-width: 50%;
+		}
 	}
 	.mobile-cta {
 		a {
