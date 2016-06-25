@@ -9,7 +9,18 @@
 		<link rel="stylesheet" href="app.css">
 	</head>
 	<body>
-		<section class="intro">
+	<nav>
+		<ul id="menu">
+			<li class="totop"><a href="#DigitalStudio" title="Top of page">Top</a></li>
+			<li class="WhatWeDo"><a href="#WhatWeDo" title="About">About</a></li>
+			<li class="WhyUs"><a href="#WhyUs" title="Why Us?">Why Us?</a></li>
+			<li class="ClientStories"><a href="#ClientStories" title="Testimonials">Testimonials</a></li>
+			<li class="Clients"><a href="#Clients" title="Portfolio">Portfolio</a></li>
+			<li class="Inquiry"><a href="#Inquiry" title="Contact">Contact</a></li>
+		</ul>
+	</nav>
+	<div id="fullpage">
+		<section class="section intro" id="intro">
 			<div class="covervid-wrapper">
 				<video class="covervid-video" autoplay loop poster="https://cdn.rawgit.com/SiamKreative/SiamKreative-Studio/master/media/Hello-World.jpg">
 					<source src="https://cdn.rawgit.com/SiamKreative/SiamKreative-Studio/master/media/Hello-World.webm" type="video/webm"/>
@@ -22,10 +33,10 @@
 					<p>We help forward-thinking clients succeed online by crafting georgous websites that make people want to know you.</p>
 					<p>Focus on your business and we’ll do the rest.</p>
 				</div>
-				<p><a data-scroll class="btn" href="#about">about</a> <a data-scroll class="btn" href="#contact">contact</a></p>
+				<p><a class="btn" href="#WhatWeDo">about</a> <a class="btn" href="#Clients">portfolio</a></p>
 			</div>
 		</section>
-		<section id="about">
+		<section class="section" id="about">
 			<div class="wrapper-large ta-center">
 				<h3>What We Do</h3>
 				<p>We’re a creative team that build strong brands &amp; relationships.<br> Here is non-exhaustive list of our skills and expertise:</p>
@@ -48,20 +59,20 @@
 				</article>
 			</div>
 		</section>
-		<section id="why-us">
+		<section class="section" id="why-us">
 			<div class="wrapper ta-center">
 				<h3>Why Us?</h3>
 				<p>There are plenty of amazing web agency, so why us?<br> If you wonder, here are few reasons why our customers like to work with us:</p>
-				<article class="grid grid--medium">
-					<div>
+				<article class="grid grid--medium" id="reasons">
+					<div reason="0">
 						<h5>We’re passionate.</h5>
 						<p>Because we love what we do, we’re always ready for the next technology shifts in the digital industry.</p>
 					</div>
-					<div>
+					<div reason="1">
 						<h5>We’re a small business.</h5>
 						<p>Everything’s hand-made and you’re talking to the people who do the work.</p>
 					</div>
-					<div>
+					<div reason="2">
 						<h5>We deliver on time.</h5>
 						<p>By splitting your project in features/milestones, we garantee that you'll get your website in weeks, not months.</p>
 					</div>
@@ -80,11 +91,11 @@
 				</article>
 				<div class="cta-banner">
 					<p>To start growing your business and increasing your brand awereness, drop us an email and we’ll talk.</p>
-					<a data-scroll class="btn" href="#contact">Get in touch</a>
+					<a class="btn" href="#Inquiry">Get in touch</a>
 				</div>
 			</div>
 		</section>
-		<section id="testimonials">
+		<section class="section" id="testimonials">
 			<div class="wrapper ta-center">
 				<h3>Testimonials</h3>
 				<p>Check out our latest and greatest work below, or use the filters to dig deeper.</p>
@@ -135,14 +146,14 @@
 				</a>
 			</div>
 		</section>
-		<section id="portfolio">
-			<div class="wrapper ta-center">
+		<section class="section" id="portfolio">
+			<div class="wrapper--large ta-center">
 				<h3>Portfolio</h3>
 				<p>Check out our latest and greatest work below,<br> or use the filters to dig deeper.</p>
+				<div id="portfolio_grid">Loading...</div>
 			</div>
-			<div id="portfolio_grid">Loading...</div>
 		</section>
-		<section id="contact">
+		<section class="section" id="contact">
 			<div class="wrapper">
 				<div class="ta-center">
 					<h3>Contact</h3>
@@ -191,6 +202,7 @@
 			</div>
 			<div id="instagram_gallery"></div>
 		</section>
+	</div>
 	</body>
 	<script type="application/ld+json">
 		{
@@ -210,10 +222,10 @@
 			}
 		}
 	</script>
-	<script type="text/javascript" src="bower_components/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
 	<script type="text/javascript" src="bower_components/Peppermint/dist/peppermint.min.js"></script>
 	<script type="text/javascript" src="bower_components/instafeed.js/instafeed.min.js"></script>
 	<script type="text/javascript" src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+	<script type="text/javascript" src="bower_components/fullpage.js/pure javascript (Alpha)/javascript.fullPage.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="data/behanceAPIProjectsJSONP.js?callback=renderPortfolio"></script>
 	<!-- The below JSONP request is asynch because contact form is at the footer -->
