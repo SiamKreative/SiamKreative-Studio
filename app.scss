@@ -148,32 +148,31 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 	height: auto;
 	max-width: 100%;
 }
-.intro {
+section.intro {
 	height: 100vh;
-	color: white;
 	background-size: cover;
 	position: relative;
 	display: flex;
 	align-items: center;
-	background: none;
+	background: #221D1B;
 	box-shadow: none;
 }
-.intro .wrapper-small {
+section.intro .wrapper-small {
 	z-index: 10;
 }
-.intro p {
+section.intro p {
 	font-size: 120%;
 	line-height: 1.6em;
 }
-.intro .text {
+section.intro .text {
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 	text-shadow: 0 0 10px black;
 }
-.intro p::selection {
+section.intro p::selection {
 	background-color: #424242;
 }
-.intro .btn {
+section.intro .btn {
 	margin: 0 0.5em;
 	height: auto;
 	background: none;
@@ -184,7 +183,7 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 	transition: all 0.3s ease-out;
 	position: relative;
 }
-.intro .btn:first-child:after, .intro .btn:last-child:after {
+section.intro .btn:first-child:after, section.intro .btn:last-child:after {
 	content: '';
 	display: block;
 	width: 30px;
@@ -192,29 +191,29 @@ section:nth-child(odd) h1, section:nth-child(odd) h2, section:nth-child(odd) h3,
 	position: absolute;
 	transition: all 0.1s ease-out;
 }
-.intro .btn:first-child:after {
+section.intro .btn:first-child:after {
 	left: -3px;
 	top: -3px;
 	border-left: 3px solid $primary;
 	border-top: 3px solid $primary;
 }
-.intro .btn:last-child:after {
+section.intro .btn:last-child:after {
 	right: -3px;
 	bottom: -3px;
 	border-right: 3px solid $primary;
 	border-bottom: 3px solid $primary;
 }
-.intro .btn:hover:first-child:after {
+section.intro .btn:hover:first-child:after {
 	border-color: white;
 	left: -15px;
 	top: -15px;
 }
-.intro .btn:hover:last-child:after {
+section.intro .btn:hover:last-child:after {
 	border-color: white;
 	right: -15px;
 	bottom: -15px;
 }
-.intro .btn:hover {
+section.intro .btn:hover {
 	background: #424242;
 	color: white;
 	border: 3px solid white;
@@ -632,7 +631,7 @@ $cta_text_color_hover: $cta_bg_color;
 	}
 }
 @media (max-width:959px) {
-	section.intro {
+	sectionsection.intro {
 		background: url('https://cdn.rawgit.com/SiamKreative/SiamKreative-Studio/master/media/Hello-World.jpg') no-repeat 50% 50%;
 		background-size: cover;
 	}
